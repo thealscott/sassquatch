@@ -1,0 +1,11 @@
+@media only screen and (min-width: 768px) {
+  /* 
+  	First we map commonly used colors to var with memorable names for 
+  	ease of use. If desired, these can then be mapped to more systemic
+  	names like "$primary_foreground_color" or whatever
+  */
+  /* line 5, ../../sass/768.scss */
+  html {
+    background: green;
+  }
+}
