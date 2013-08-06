@@ -1,5 +1,34 @@
-/* Welcome to Compass. Use this file to write IE specific override styles.
- * Import this file using the following HTML or equivalent:
- * <!--[if IE]>
- *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
- * <![endif]--> */
+// My assumption is that <IE 9 does not need responsive, so we compile a wholly separate stylesheet
+// that serves as an alternate rather than an override. 
+
+// Dependencies
+@import "compass/reset";
+@import "compass";
+
+@import "config/color_map";
+
+@import "helpers/constructor";
+
+@import "modules/typography";
+@import "modules/buttons";
+
+@import "pages/default";
+@import "pages/home";
+
+// Base and desktop styles
+@import "base";
+@import "960";
+
+// Version specific fixes
+
+.lt-ie9 {
+
+}
+
+.ie8 {
+
+}
+
+.ie7 {
+
+}

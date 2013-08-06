@@ -9,8 +9,8 @@
 		@extend %buttons_standard_button;
 	}
 
-	#home_page {
-		@include home_page;
-		@extend %home_page_base;
-	}
+	// #home_page {
+	// 	@include home_page;
+	// 	@extend %home_page_base;
+	// }
 };
