@@ -1,0 +1,28 @@
+@mixin buttons() {
+	%buttons_standard_button {
+		cursor:pointer;
+		border:1px $charcoal solid;
+		background:$dark_grey;
+		padding:0.3em 0.5em;
+		font-size:1rem;
+
+		&:hover,
+		&:focus {
+			background:$light_grey;
+		}
+
+		&:active {
+			position:relative;
+			top:1px;
+			left:1px;
+		}
+	}
+
+	%buttons_large_button {
+		@extend %buttons_standard_button;
+
+		border-width:2px;
+		padding:0.5em 1em;
+		font-size:2rem;
+	}
+}

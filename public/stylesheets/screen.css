@@ -1,0 +1,165 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* 
+	First we map commonly used colors to var with memorable names for 
+	ease of use. If desired, these can then be mapped to more systemic
+	names like "$primary_foreground_color" or whatever
+*/
+/* line 8, ../sass/modules/_typography.scss */
+html {
+  font-size: 90%;
+  font-family: Helvetica, arial, sans-serif;
+  color: #222222;
+}
+/* line 13, ../sass/modules/_typography.scss */
+html * {
+  line-height: 1.6em;
+}
+/* line 17, ../sass/modules/_typography.scss */
+html strong {
+  font-weight: bold;
+}
+/* line 21, ../sass/modules/_typography.scss */
+html em {
+  font-style: italic;
+}
+/* line 25, ../sass/modules/_typography.scss */
+html p {
+  margin-bottom: 1em;
+}
+
+/* line 31, ../sass/modules/_typography.scss */
+html h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  line-height: 1.2em;
+}
+/* line 38, ../sass/modules/_typography.scss */
+html h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  line-height: 1.2em;
+}
+/* line 45, ../sass/modules/_typography.scss */
+html h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  line-height: 1.2em;
+}
+
+/* line 54, ../sass/modules/_typography.scss */
+html a {
+  -webkit-transition: background, 0.5s;
+  -moz-transition: background, 0.5s;
+  -o-transition: background, 0.5s;
+  transition: background, 0.5s;
+  display: inline-block;
+  color: #ffa514;
+  background: none;
+  padding: 0 0.2em;
+}
+/* line 64, ../sass/modules/_typography.scss */
+html a:hover, html a:focus {
+  background: #999999;
+  text-decoration: none;
+}
+/* line 70, ../sass/modules/_typography.scss */
+html a:active {
+  text-decoration: none;
+}
+
+/* line 2, ../sass/modules/_buttons.scss */
+button {
+  cursor: pointer;
+  border: 1px #222222 solid;
+  background: #777777;
+  padding: 0.3em 0.5em;
+  font-size: 1rem;
+}
+/* line 10, ../sass/modules/_buttons.scss */
+button:hover, button:focus {
+  background: #999999;
+}
+/* line 14, ../sass/modules/_buttons.scss */
+button:active {
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+
+/* line 21, ../sass/modules/_buttons.scss */
+#home_page button.large {
+  border-width: 2px;
+  padding: 0.5em 1em;
+  font-size: 2rem;
+}

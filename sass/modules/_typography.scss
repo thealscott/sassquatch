@@ -1,0 +1,75 @@
+@mixin typography() {
+
+	$base_font_size:90%;
+	$base_color:$charcoal;
+	$base_font_family: Helvetica, arial, sans-serif;
+	$base_line_height:1.6em;
+
+	%typography_base {
+		font-size:$base_font_size;
+		font-family: $base_font_family;
+		color:$base_color;
+		
+		* {
+			line-height:$base_line_height;
+		}
+
+		strong {
+			font-weight:bold;
+		}
+
+		em {
+			font-style: italic;
+		}
+
+		p {
+			margin-bottom:1em;
+		}
+	}
+
+	%typography_headers {
+		h1 {
+			font-size:3rem;
+			margin-bottom: 0.5em;
+			font-weight:bold;
+			line-height:1.2em;
+		}
+
+		h2 {
+			font-size:2rem;
+			margin-bottom: 0.5em;
+			font-weight:bold;
+			line-height:1.2em;
+		}
+
+		h3 {
+			font-size: 1.5rem;
+			margin-bottom: 0.5em;
+			font-weight:bold;
+			line-height:1.2em;
+		}
+	}
+
+	%typography_links {
+		a {
+			@include transition(background, 0.5s);
+
+			display:inline-block;
+			color:$orange;
+			background:none;
+			padding:0 0.2em;
+
+
+			&:hover,
+			&:focus {
+				background:$light_grey;
+				text-decoration: none;
+
+			}
+
+			&:active {
+				text-decoration: none;
+			}
+		}
+	}
+}

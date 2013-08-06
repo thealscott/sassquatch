@@ -1,0 +1,16 @@
+@include construct() {
+	html {
+		@extend %typography_base;
+		@extend %typography_headers;
+		@extend %typography_links;
+	}
+
+	button {
+		@extend %buttons_standard_button;
+	}
+
+	#home_page {
+		@include home_page;
+		@extend %home_page_base;
+	}
+};
