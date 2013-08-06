@@ -22,7 +22,7 @@
 	    
 	    <link rel="stylesheet" media="print" type="text/css" href="/css/print.css">
 	</head>
-	<body>
+	<body id="home_page">
 		<main>
 			<section>
 				<h1>SASSquatch</h1>
@@ -30,6 +30,8 @@
 				<p>This is SASSquatch.</p>
 
 				<img width="50%" src="/images/sassquatch.png" alt="SASSquatch">
+
+				<button>BUTTON</button>
 			</section>
 		</main>
 	</body>

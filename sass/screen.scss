@@ -3,13 +3,13 @@
 @import "config/compass_modules";
 @import "config/color_map";
 
-@import "helpers/constructor";
-
 @import "modules/typography";
 @import "modules/buttons";
 
 @import "pages/default";
 @import "pages/home";
+
+@import "helpers/constructor";
 
 
 @import "base";

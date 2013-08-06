@@ -1,14 +1,8 @@
 @mixin home_page() {
 
-	//%home_page_base {
-		button.large {
-			@extend %buttons_large_button;
-		}
-	//}
+	// button {
+	// 	@extend .buttons_large_button
+	// }
 	
-	%home_page_480 {
-		button.large {
-			@extend %buttons_large_button;
-		}
-	}
+
 }

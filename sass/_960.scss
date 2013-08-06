@@ -1,0 +1,35 @@
+@include construct_960() {
+
+	$base_font_size:90%;
+	$base_color:$charcoal;
+	$base_font_family: Helvetica, arial, sans-serif;
+	$base_line_height:1.6em;
+
+	%typography_960 {
+		$base_font_size:80%;
+
+		font-size:$base_font_size;
+		font-family: $base_font_family;
+		color:$base_color;
+		
+		* {
+			line-height:$base_line_height;
+		}
+
+		strong {
+			font-weight:bold;
+		}
+
+		em {
+			font-style: italic;
+		}
+
+		p {
+			margin-bottom:1em;
+		}
+	}
+
+	html {
+		@extend %typography_960;
+	}
+};

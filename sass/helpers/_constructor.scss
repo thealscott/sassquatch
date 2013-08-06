@@ -4,3 +4,10 @@
 
 	@content;
 }
+
+@mixin construct_960() {
+	@include typography;
+	// @include buttons;
+
+	@content;
+}
