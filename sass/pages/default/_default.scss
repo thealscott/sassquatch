@@ -1,0 +1,30 @@
+@mixin default_page_base() {
+	html {
+		@extend %typography_base;
+		@extend %typography_headings;
+		@extend %typography_links;
+
+		@include transition(background 1s);
+
+		background:white;
+	}
+}
+
+@mixin default_page_480() {
+	html {
+		background:orange;
+	}
+
+}
+
+@mixin default_page_768() {
+	html {
+		background:green;
+	}
+}
+
+@mixin default_page_960() {
+	html {
+		background:grey;
+	}
+}

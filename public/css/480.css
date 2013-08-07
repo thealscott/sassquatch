@@ -4,7 +4,7 @@
   	ease of use. If desired, these can then be mapped to more systemic
   	names like "$primary_foreground_color" or whatever
   */
-  /* line 5, ../../sass/480.scss */
+  /* line 14, ../../sass/pages/default/_default.scss */
   html {
     background: orange;
   }

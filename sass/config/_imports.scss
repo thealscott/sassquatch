@@ -5,7 +5,8 @@
 @import "modules/typography";
 @import "modules/buttons";
 
-@import "pages/default";
-@import "pages/home";
+@import "pages/default/default";
+@import "pages/home/home";
+@import "pages/test/test";
 
 @import "helpers/constructor";

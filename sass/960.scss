@@ -2,12 +2,6 @@
 	@import "config/imports";
 
 	@include construct() {
-		html {
-			background:grey;
-		}
-
-		#home_page {
-			@include home_page;
-		}
+		@include default_page_960;
 	};
 }

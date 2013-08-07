@@ -2,15 +2,13 @@
 @import "config/imports";
 
 @include construct() {
-	html {
-		@extend %typography_base;
-		@extend %typography_headers;
-		@extend %typography_links;
+	@include default_page_base;
 
-		@include single-transition(background, 1s);
+	#home_page {
+		@include home_page_base;
 	}
 
-	button {
-		@extend %buttons_standard_button;
+	#test_page {
+		@include test_page_base;
 	}
 };

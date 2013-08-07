@@ -134,29 +134,11 @@ html a:active {
   text-decoration: none;
 }
 
-/* line 2, ../../sass/modules/_buttons.scss */
-button {
-  cursor: pointer;
-  border: 1px #222222 solid;
-  background: #777777;
-  padding: 0.3em 0.5em;
-  font-size: 1rem;
-}
-/* line 10, ../../sass/modules/_buttons.scss */
-button:hover, button:focus {
-  background: #999999;
-}
-/* line 14, ../../sass/modules/_buttons.scss */
-button:active {
-  position: relative;
-  top: 1px;
-  left: 1px;
-}
-
-/* line 5, ../../sass/base.scss */
+/* line 2, ../../sass/pages/default/_default.scss */
 html {
   -webkit-transition: background 1s;
   -moz-transition: background 1s;
   -o-transition: background 1s;
   transition: background 1s;
+  background: white;
 }

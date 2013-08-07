@@ -4,33 +4,7 @@
   	ease of use. If desired, these can then be mapped to more systemic
   	names like "$primary_foreground_color" or whatever
   */
-  /* line 2, ../../sass/modules/_buttons.scss */
-  #home_page button {
-    cursor: pointer;
-    border: 1px #222222 solid;
-    background: #777777;
-    padding: 0.3em 0.5em;
-    font-size: 1rem;
-  }
-  /* line 10, ../../sass/modules/_buttons.scss */
-  #home_page button:hover, #home_page button:focus {
-    background: #999999;
-  }
-  /* line 14, ../../sass/modules/_buttons.scss */
-  #home_page button:active {
-    position: relative;
-    top: 1px;
-    left: 1px;
-  }
-
-  /* line 21, ../../sass/modules/_buttons.scss */
-  #home_page button {
-    border-width: 2px;
-    padding: 0.5em 1em;
-    font-size: 2rem;
-  }
-
-  /* line 5, ../../sass/960.scss */
+  /* line 27, ../../sass/pages/default/_default.scss */
   html {
     background: grey;
   }

@@ -28,7 +28,7 @@
 	    
 	    <link rel="stylesheet" media="print" type="text/css" href="/css/print.css">
 	</head>
-	<body id="home_page">
+	<body id="test_page">
 		<main>
 			<section>
 				<h1>SASSquatch</h1>

@@ -2,8 +2,6 @@
 	@import "config/imports";
 
 	@include construct() {
-		html {
-			background:green;
-		}
+		@include default_page_768;
 	};
 }
