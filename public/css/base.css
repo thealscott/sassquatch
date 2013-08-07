@@ -68,52 +68,54 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	ease of use. If desired, these can then be mapped to more systemic
 	names like "$primary_foreground_color" or whatever
 */
-/* line 8, ../../sass/modules/_typography.scss */
+/* line 10, ../../sass/modules/_typography.scss */
 html {
   font-size: 90%;
   font-family: Helvetica, arial, sans-serif;
   color: #222222;
 }
-/* line 13, ../../sass/modules/_typography.scss */
+/* line 14, ../../sass/modules/_typography.scss */
+html.touch {
+  font-size: 100%;
+}
+/* line 21, ../../sass/modules/_typography.scss */
 html * {
   line-height: 1.6em;
 }
-/* line 17, ../../sass/modules/_typography.scss */
+/* line 25, ../../sass/modules/_typography.scss */
 html strong {
   font-weight: bold;
 }
-/* line 21, ../../sass/modules/_typography.scss */
+/* line 29, ../../sass/modules/_typography.scss */
 html em {
   font-style: italic;
 }
-/* line 25, ../../sass/modules/_typography.scss */
+/* line 33, ../../sass/modules/_typography.scss */
 html p {
   margin-bottom: 1em;
 }
 
-/* line 31, ../../sass/modules/_typography.scss */
+/* line 39, ../../sass/modules/_typography.scss */
+html h1, html h2, html h3 {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  line-height: 1.2em;
+  text-align: center;
+}
+/* line 46, ../../sass/modules/_typography.scss */
 html h1 {
   font-size: 3rem;
-  margin-bottom: 0.5em;
-  font-weight: bold;
-  line-height: 1.2em;
 }
-/* line 38, ../../sass/modules/_typography.scss */
+/* line 50, ../../sass/modules/_typography.scss */
 html h2 {
   font-size: 2rem;
-  margin-bottom: 0.5em;
-  font-weight: bold;
-  line-height: 1.2em;
 }
-/* line 45, ../../sass/modules/_typography.scss */
+/* line 54, ../../sass/modules/_typography.scss */
 html h3 {
   font-size: 1.5rem;
-  margin-bottom: 0.5em;
-  font-weight: bold;
-  line-height: 1.2em;
 }
 
-/* line 54, ../../sass/modules/_typography.scss */
+/* line 60, ../../sass/modules/_typography.scss */
 html a {
   -webkit-transition: background, 0.5s;
   -moz-transition: background, 0.5s;
@@ -124,12 +126,12 @@ html a {
   background: none;
   padding: 0 0.2em;
 }
-/* line 64, ../../sass/modules/_typography.scss */
+/* line 70, ../../sass/modules/_typography.scss */
 html a:hover, html a:focus {
   background: #999999;
   text-decoration: none;
 }
-/* line 70, ../../sass/modules/_typography.scss */
+/* line 76, ../../sass/modules/_typography.scss */
 html a:active {
   text-decoration: none;
 }
@@ -141,4 +143,31 @@ html {
   -o-transition: background 1s;
   transition: background 1s;
   background: white;
+}
+/* line 11, ../../sass/pages/default/_default.scss */
+html * {
+  box-sizing: border-box;
+}
+
+/* line 16, ../../sass/pages/default/_default.scss */
+main {
+  width: 100%;
+  min-width: 320px;
+  padding: 20px 10%;
+}
+
+/* line 22, ../../sass/pages/default/_default.scss */
+figure {
+  width: 50%;
+  min-width: 200px;
+  margin: 0 auto 1.6em;
+  position: relative;
+}
+/* line 28, ../../sass/pages/default/_default.scss */
+figure img {
+  width: 100%;
+}
+/* line 32, ../../sass/pages/default/_default.scss */
+figure figcaption {
+  font-size: 0.8rem;
 }

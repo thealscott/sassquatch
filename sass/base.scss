@@ -1,9 +1,23 @@
-@import "compass/reset";
-@import "config/imports";
+// if you are going to use any kind of reset or boilerplate styles, they should only be included here, 
+// because if they are included in the succeeding files they break the cascade and reset your base styles.
+@import "compass/reset"; 
 
+// because we have to put the breakpoint styles into separate files (SASS parse bug/feature makes it try 
+// and extend the first declared instance of a class/placeholder so it throws the "outside media block" error) 
+// we need to make sure all the modules, mixins and libraries are imported again so they are available. 
+@import "config/imports"; 
+
+
+// the constructor wrapping mixin makes sure that we call universal module mixins as needed. think of it like
+// a base controller construct method. Kind of. 
 @include construct() {
+	// any modules or helpers specific to this break point would be included here. 
+	// @include swipe_animations;
+
+	// default/universal page styles.
 	@include default_page_base;
 
+	// specific page overrides.
 	#home_page {
 		@include home_page_base;
 	}

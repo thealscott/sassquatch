@@ -1,12 +1,20 @@
 @mixin typography() {
 
 	$base_font_size:90%;
+	$touch_font_size:100%;
+
 	$base_color:$charcoal;
 	$base_font_family: Helvetica, arial, sans-serif;
 	$base_line_height:1.6em;
 
 	%typography_base {
 		font-size:$base_font_size;
+
+		// if there is modernizr touch detection, increase the base font size for fat fingers;
+		&.touch {
+			font-size:$touch_font_size;
+		}
+
 		font-family: $base_font_family;
 		color:$base_color;
 		
@@ -28,25 +36,23 @@
 	}
 
 	%typography_headings {
-		h1 {
-			font-size:3rem;
+		h1,h2,h3 {
 			margin-bottom: 0.5em;
 			font-weight:bold;
 			line-height:1.2em;
+			text-align: center;
+		}
+
+		h1 {
+			font-size:3rem;
 		}
 
 		h2 {
 			font-size:2rem;
-			margin-bottom: 0.5em;
-			font-weight:bold;
-			line-height:1.2em;
 		}
 
 		h3 {
 			font-size: 1.5rem;
-			margin-bottom: 0.5em;
-			font-weight:bold;
-			line-height:1.2em;
 		}
 	}
 

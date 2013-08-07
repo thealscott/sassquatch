@@ -4,8 +4,15 @@
   	ease of use. If desired, these can then be mapped to more systemic
   	names like "$primary_foreground_color" or whatever
   */
-  /* line 27, ../../sass/pages/default/_default.scss */
+  /* line 63, ../../sass/pages/default/_default.scss */
   html {
     background: grey;
+  }
+
+  /* line 67, ../../sass/pages/default/_default.scss */
+  main {
+    max-width: 960px;
+    position: relative;
+    margin: auto;
   }
 }

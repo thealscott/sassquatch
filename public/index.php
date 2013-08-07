@@ -6,19 +6,6 @@
 <!--[if (IE 9)&!(IEMobile)]><html class="ie9" lang="en"><![endif]-->
 <!--[if gt IE 9]><!--> <html lang="en"><!--<![endif]-->
 	<head>
-		<!--[if gte IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <link rel="stylesheet" media="screen" type="text/css" href="/css/base.css">
-        <link rel="stylesheet" media="screen and min-width:480px;" type="text/css" href="/css/480.css">
-        <link rel="stylesheet" media="screen and min-width:768px;" type="text/css" href="/css/768.css">
-        <link rel="stylesheet" media="screen and min-width:960px;" type="text/css" href="/css/960.css">
-	    <![endif]-->
-
-		<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    	<link href="/css/ie.css" rel="stylesheet">
-	    <![endif]-->
-	    
 	    <!--[if !IE]><!-->
         <link rel="stylesheet" media="screen" type="text/css" href="/css/base.css">
         <link rel="stylesheet" media="screen" type="text/css" href="/css/480.css">
@@ -33,11 +20,19 @@
 			<section>
 				<h1>SASSquatch</h1>
 
-				<p>This is SASSquatch.</p>
+				<figure>
+					<img src="/images/sassquatch.png" alt="SASSquatch">
+					<figcaption>
+						The Lesser or Common Garden SASSquatch.
+					</figcaption>
+				</figure>
 
-				<img width="50%" src="/images/sassquatch.png" alt="SASSquatch">
+				<div>
+					<p>
+						Hello. This will tell you all about SASSquatch one day, hopefully.
+					</p>
+				</div>
 
-				<button>BUTTON</button>
 			</section>
 		</main>
 	</body>

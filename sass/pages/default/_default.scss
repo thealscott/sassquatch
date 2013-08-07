@@ -7,6 +7,31 @@
 		@include transition(background 1s);
 
 		background:white;
+
+		* {
+			box-sizing:border-box;
+		}
+	}
+
+	main {
+		width:100%;
+		min-width:320px;
+		padding:20px 10%;		
+	}
+
+	figure {
+		width:50%;
+		min-width: 200px;
+		margin:0 auto 1.6em;
+		position:relative;
+
+		img {
+			width:100%;
+		}
+
+		figcaption {
+			font-size:0.8rem;
+		}
 	}
 }
 
@@ -14,17 +39,34 @@
 	html {
 		background:orange;
 	}
-
 }
 
 @mixin default_page_768() {
 	html {
 		background:green;
 	}
+
+	figure {
+		width:48%;
+		margin:0 2% 0 0;
+		float:left;
+	}
+
+	figure ~ div {
+		width:48%;
+		margin:0 2% 0 0;
+		float:left;
+	}
 }
 
 @mixin default_page_960() {
 	html {
 		background:grey;
+	}
+
+	main {
+		max-width:960px;
+		position:relative;
+		margin:auto;
 	}
 }
