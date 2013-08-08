@@ -7,13 +7,12 @@
 <!--[if gt IE 9]><!--> <html lang="en"><!--<![endif]-->
 	<head>
 	    <!--[if !IE]><!-->
-        <link rel="stylesheet" media="screen" type="text/css" href="/css/base.css">
-        <link rel="stylesheet" media="screen" type="text/css" href="/css/480.css">
-        <link rel="stylesheet" media="screen" type="text/css" href="/css/768.css">
-        <link rel="stylesheet" media="screen" type="text/css" href="/css/960.css">
+        <link rel="stylesheet" media="screen" type="text/css" href="css/base.css">
+        <link rel="stylesheet" media="screen" type="text/css" href="css/480.css">
+        <link rel="stylesheet" media="screen" type="text/css" href="css/768.css">
+        <link rel="stylesheet" media="screen" type="text/css" href="css/960.css">
 	    <!--<![endif]-->
 	    
-	    <link rel="stylesheet" media="print" type="text/css" href="/css/print.css">
 	</head>
 	<body id="test_page">
 		<main>
@@ -21,7 +20,7 @@
 				<h1>SASSquatch</h1>
 
 				<figure>
-					<img src="/images/sassquatch.png" alt="SASSquatch">
+					<img src="images/sassquatch.png" alt="SASSquatch">
 					<figcaption>
 						The Lesser or Common Garden SASSquatch.
 					</figcaption>
