@@ -1,0 +1,36 @@
+@mixin default_page_base() {
+	html {
+		@extend %typography_base;
+		@extend %typography_headings;
+		@extend %typography_links;
+
+		@include transition(background 1s);
+
+		background:white;
+
+		* {
+			box-sizing:border-box;
+		}
+	}
+
+	main {
+		width:100%;
+		min-width:320px;
+		padding:20px 10%;		
+	}
+
+	figure {
+		width:50%;
+		min-width: 200px;
+		margin:0 auto 1.6em;
+		position:relative;
+
+		img {
+			width:100%;
+		}
+
+		figcaption {
+			font-size:0.8rem;
+		}
+	}
+}
