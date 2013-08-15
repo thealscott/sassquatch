@@ -21,8 +21,4 @@
 	#home_page {
 		@include home_page_base;
 	}
-
-	#test_page {
-		@include test_page_base;
-	}
 };
