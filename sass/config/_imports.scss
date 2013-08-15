@@ -1,12 +1,11 @@
+
 @import "compass";
 
 @import "config/color_map";
 
+@import "helpers/constructor";
+
 @import "modules/typography";
-@import "modules/buttons";
 
 @import "pages/default/default";
 @import "pages/home/home";
-@import "pages/test/test";
-
-@import "helpers/constructor";
