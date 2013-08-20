@@ -1,15 +1,89 @@
-SASSquatch
-==========
+# sassquatch-test
 
-Experiments with a SASS framework/structure
+> The best Grunt plugin ever.
 
-The idea being to achieve two things:
+## Getting Started
+This plugin requires Grunt `~0.4.1`
 
-* Make it easy to have a common set of included modular placeholder/classes available at all times
-* Make the code easier to manage and keep track of at a page level by splitting things out into more manageable chunks
+If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
-I had some grander ideas about leveraging SASS to do clever things liek iterate through config lists and include the appropriate files, but sadly, it seems you can't import things from within directives, which scuppers some of that and makes things less clever than I'd like
+```shell
+npm install sassquatch-test --save-dev
+```
 
-I wanted to try and use mixins and functions to emulate a kind of OOP style class system, but it hasn't panned out quite like that. 
+Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
-However, so far, I think there may be some legs in this just from a code organisation perspective. 
+```js
+grunt.loadNpmTasks('sassquatch-test');
+```
+
+## The "sassquatch_test" task
+
+### Overview
+In your project's Gruntfile, add a section named `sassquatch_test` to the data object passed into `grunt.initConfig()`.
+
+```js
+grunt.initConfig({
+  sassquatch_test: {
+    options: {
+      // Task-specific options go here.
+    },
+    your_target: {
+      // Target-specific file lists and/or options go here.
+    },
+  },
+})
+```
+
+### Options
+
+#### options.separator
+Type: `String`
+Default value: `',  '`
+
+A string value that is used to do something with whatever.
+
+#### options.punctuation
+Type: `String`
+Default value: `'.'`
+
+A string value that is used to do something else with whatever else.
+
+### Usage Examples
+
+#### Default Options
+In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+
+```js
+grunt.initConfig({
+  sassquatch_test: {
+    options: {},
+    files: {
+      'dest/default_options': ['src/testing', 'src/123'],
+    },
+  },
+})
+```
+
+#### Custom Options
+In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+
+```js
+grunt.initConfig({
+  sassquatch_test: {
+    options: {
+      separator: ': ',
+      punctuation: ' !!!',
+    },
+    files: {
+      'dest/default_options': ['src/testing', 'src/123'],
+    },
+  },
+})
+```
+
+## Contributing
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+## Release History
+_(Nothing yet)_
