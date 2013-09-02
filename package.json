@@ -1,7 +1,7 @@
 {
-  "name": "bigfoot",
+  "name": "grunt-sassquatch",
   "description": "SASSquatch, the modular SASS framework.",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/thealscott/sassquatch",
   "author": {
     "name": "Al Scott",

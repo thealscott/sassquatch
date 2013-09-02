@@ -3,15 +3,45 @@ exports.init = function(grunt) {
     'setup' : function() {
       grunt.log.write('Running full SASSquatch setup, from config JSON');
 
-      var config = grunt.config.get('sassquatch'),
-          methods = config.methods;
+      var config = grunt.config.get('sassquatch');
 
+      // Ok, let's get this party started by creating all the config files that are always there
+      grunt.file.write(config.sass_path +'/config/_imports_pages.scss', '');
+      grunt.file.write(config.sass_path +'/config/_imports_modules.scss', '');
+
+      // now we add the extra stuff from the config
+
+      config.extra_configs.forEach(function(value, index) {
+        grunt.file.write(config.sass_path +'/config/_'+ value +'.scss', '');
+      });
+
+      // Now compile the master imports file
+      var replacements = {
+        'config_imports' : '',
+        'helpers_imports' : ''
+      };
+
+      config.extra_configs.forEach(function(value, index) {
+        replacements.config_imports += '@import "config/'+ value +'";\r\n';
+      });
+
+      config.helpers.forEach(function(value, index) {
+        replacements.helpers_imports += '@import "helpers/'+ value +'";\r\n';
+      });
+
+      var template = grunt.file.read('./tasks/templates/config_imports.scss');
+      var write_path = config.sass_path + '/config/_imports.scss';
+
+      sassquatch.write_to_template(template, write_path, replacements);
+
+    
+      // All the standard bits done, now lets look at the configured pages, modules and breakpoints.
       config.pages.forEach(function(page, index){
-        methods.add_page(page);
+        sassquatch.add_page(page);
       });
 
       config.modules.forEach(function(module, index){
-        methods.add_module(module);
+        sassquatch.add_module(module);
       });
 
       config.breakpoints.forEach(function(breakpoint, index){
@@ -27,6 +57,8 @@ exports.init = function(grunt) {
         grunt.file.write(config.sass_path +'/'+ breakpoint +'.scss', output);
         grunt.log.write('Added breakpoint stylesheet: "'+ breakpoint + '"').ok();
       });
+
+      
     },
     'add_page' : function(page_name) {
       grunt.log.write('New page: "'+ page_name + '"');
@@ -54,10 +86,10 @@ exports.init = function(grunt) {
       grunt.log.write('Added page: "'+ page_name + '"').ok();
 
       // brittle
-      // var imports_config = grunt.file.read('sass/config/_imports_pages.scss');
-      // imports_config += '\r\n@import "pages/'+ page_name +'/'+ page_name +'";';
+      var imports_config = grunt.file.read('sass/config/_imports_pages.scss');
+      imports_config += '\r\n@import "pages/'+ page_name +'/'+ page_name +'";';
       
-      // grunt.file.write('sass/config/_imports_pages.scss', imports_config);
+      grunt.file.write('sass/config/_imports_pages.scss', imports_config);
 
       grunt.log.write('Added line to config/_imports_pages for "'+ page_name + '"').ok();
 
@@ -76,12 +108,19 @@ exports.init = function(grunt) {
 
       grunt.log.write('Added module: "'+ module_name + '"').ok();
 
-      // var imports_config = grunt.file.read('sass/config/_imports_modules.scss');
-      // imports_config += '\r\n@import "modules/'+ module_name +'";';
+      var imports_config = grunt.file.read('sass/config/_imports_modules.scss');
+      imports_config += '\r\n@import "modules/'+ module_name +'";';
 
-      // grunt.file.write('sass/config/_imports_modules.scss', imports_config);
+      grunt.file.write('sass/config/_imports_modules.scss', imports_config);
 
       grunt.log.write('Added line to config/_imports_modules for "'+ module_name + '"').ok();
+    },
+    'write_to_template' : function(template, write_path, replacements) {
+      for (var key in replacements) {
+        template = template.replace('[['+ key +']]', replacements[key]);
+      }
+
+      grunt.file.write(write_path, template);
     }
   }
 
