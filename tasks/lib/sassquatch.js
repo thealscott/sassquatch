@@ -29,7 +29,7 @@ exports.init = function(grunt) {
         replacements.helpers_imports += '@import "helpers/'+ value +'";\r\n';
       });
 
-      var template = grunt.file.read('./tasks/templates/config_imports.scss');
+      var template = grunt.file.read(__dirname + '/../tasks/templates/config_imports.scss');
       var write_path = config.sass_path + '/config/_imports.scss';
 
       sassquatch.write_to_template(template, write_path, replacements);

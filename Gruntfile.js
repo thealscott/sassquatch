@@ -29,24 +29,24 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    sassquatch_test: {
-      default_options: {
-        options: {
-        },
-        files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123'],
-        },
-      },
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!',
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123'],
-        },
-      },
-    },
+    // sassquatch_test: {
+    //   default_options: {
+    //     options: {
+    //     },
+    //     files: {
+    //       'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123'],
+    //     },
+    //   },
+    //   custom_options: {
+    //     options: {
+    //       separator: ': ',
+    //       punctuation: ' !!!',
+    //     },
+    //     files: {
+    //       'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123'],
+    //     },
+    //   },
+    // },
 
     // Unit tests.
     nodeunit: {
@@ -87,13 +87,13 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'sassquatch_test', 'nodeunit']);
+  // grunt.registerTask('test', ['clean', 'sassquatch_test', 'nodeunit']);
 
-  var sassquatch = require('./tasks/lib/sassquatch').init(grunt);
+  var sassquatch = require(__dirname + '/tasks/lib/sassquatch').init(grunt);
 
   grunt.registerTask('sassquatch_template', 'template test.', sassquatch.template_test);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'test']);
+  // grunt.registerTask('default', ['jshint', 'test']);
 
 };
