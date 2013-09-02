@@ -34,6 +34,16 @@ exports.init = function(grunt) {
 
       sassquatch.write_to_template(template, write_path, replacements);
 
+      var template = grunt.file.read(__dirname + '/../templates/constructor.scss');
+      var write_path = config.sass_path + '/helpers/_constructor.scss';
+
+      sassquatch.write_to_template(template, write_path, replacements);
+
+      var template = grunt.file.read(__dirname + '/../templates/base.scss');
+      var write_path = config.sass_path + '/base.scss';
+
+      sassquatch.write_to_template(template, write_path, replacements);
+
     
       // All the standard bits done, now lets look at the configured pages, modules and breakpoints.
       config.pages.forEach(function(page, index){
