@@ -57,11 +57,11 @@ exports.init = function(grunt) {
       config.breakpoints.forEach(function(breakpoint, index){
 
         var output = '@media only screen and (min-width: '+ breakpoint +'px) {\r\n'+
-        ' @import "config/imports";\r\n'+
-        ' \r\n'+
-        '  @include construct() {\r\n'+
-        '    @include default_page_'+ breakpoint +';\r\n'+
-        '  };\r\n'+
+        '   @import "config/imports";\r\n'+
+        '   \r\n'+
+        '   @include construct() {\r\n'+
+        '       @include default_page_'+ breakpoint +';\r\n'+
+        '   };\r\n'+
         '}';
 
         grunt.file.write(config.sass_path +'/'+ breakpoint +'.scss', output);

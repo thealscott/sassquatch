@@ -13,9 +13,8 @@ module.exports = function(grunt) {
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
-  // var config = grunt.config.get('sassquatch'),
-  //     methods = config.methods;
   var sassquatch = require('./lib/sassquatch').init(grunt);
 
-  grunt.registerTask('sassquatch_add_page', 'add a sassquatch page', sassquatch.add_page);
+  grunt.registerTask('sassquatch_add_page', 'add a sassquatch page (do\'nt run before running sassquatch_setup)', sassquatch.add_page);
+  grunt.registerTask('yeti_add_page', 'add a sassquatch page  (do\'nt run before running sassquatch_setup)', sassquatch.add_page);
 };

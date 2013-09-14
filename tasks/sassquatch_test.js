@@ -48,7 +48,4 @@ module.exports = function(grunt) {
       grunt.log.writeln('File "' + f.dest + '" created.');
     });
   });
-
-  
-
 };

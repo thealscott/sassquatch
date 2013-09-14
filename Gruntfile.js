@@ -49,9 +49,9 @@ module.exports = function(grunt) {
     // },
 
     // Unit tests.
-    nodeunit: {
-      tests: ['test/*_test.js'],
-    },
+    // nodeunit: {
+    //   tests: ['test/*_test.js'],
+    // },
 
     sassquatch: {
       sass_path : 'sass',
@@ -83,15 +83,11 @@ module.exports = function(grunt) {
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  // grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
   // grunt.registerTask('test', ['clean', 'sassquatch_test', 'nodeunit']);
-
-  var sassquatch = require(__dirname + '/tasks/lib/sassquatch').init(grunt);
-
-  grunt.registerTask('sassquatch_template', 'template test.', sassquatch.template_test);
 
   // By default, lint and run all tests.
   // grunt.registerTask('default', ['jshint', 'test']);
