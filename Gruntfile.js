@@ -67,12 +67,12 @@ module.exports = function(grunt) {
       ],
       pages : [
         // default always exists
-        'test',
-        'test_two'
+        'home',
+        'contact'
       ],
       modules : [
-        'test_mod',
-        'test_mod_two'
+        'typography',
+        'buttons'
       ]
     }
   });
