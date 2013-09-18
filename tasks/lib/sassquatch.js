@@ -44,6 +44,8 @@ exports.init = function(grunt) {
 
       sassquatch.write_to_template(template, write_path, replacements);
 
+      // Add the default page type
+      sassquatch.add_page('default');
     
       // All the standard bits done, now lets look at the configured pages, modules and breakpoints.
       config.pages.forEach(function(page, index){
@@ -81,7 +83,7 @@ exports.init = function(grunt) {
         content += '@import "'+ value +'";\r\n';
 
         var local_content = ''+
-        '@mixin '+ page_name +'_'+ value +'() {\r\n' +
+        '@mixin '+ page_name +'_page_'+ value +'() {\r\n' +
         '}';
 
 
@@ -89,7 +91,7 @@ exports.init = function(grunt) {
         grunt.log.write('Added breakpoint: "'+ value + '"').ok();
       });
 
-      grunt.file.write(config.sass_path +'/pages/'+ page_name +'/_base.scss', '@mixin '+ page_name +'_base() {\r\n}');
+      grunt.file.write(config.sass_path +'/pages/'+ page_name +'/_base.scss', '@mixin '+ page_name +'_page_base() {\r\n}');
       grunt.log.write('Added breakpoint: "base"').ok();
 
       grunt.file.write(config.sass_path +'/pages/'+ page_name +'/_'+ page_name+ '.scss', content);
