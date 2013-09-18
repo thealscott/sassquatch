@@ -1,17 +1,2 @@
 @mixin default_page_768() {
-	html {
-		background:green;
-	}
-
-	figure {
-		width:48%;
-		margin:0 2% 0 0;
-		float:left;
-	}
-
-	figure ~ div {
-		width:48%;
-		margin:0 2% 0 0;
-		float:left;
-	}
 }

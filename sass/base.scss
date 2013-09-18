@@ -16,13 +16,4 @@
 
 	// default/universal page styles.
 	@include default_page_base;
-
-	// specific page overrides.
-	#home_page {
-		@include home_page_base;
-	}
-
-	#test_page {
-		@include test_page_base;
-	}
 };
