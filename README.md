@@ -1,5 +1,7 @@
 # (grunt) SASSquatch
 
+**The grunt plugin branch is now the master branch of this project. If you want to see what SASSquatch looks like when implemented, look at the Implemented branch**
+
 SASSquatch is a SASS framework (in as much as such a thing is possible), built on top of Compass.
 
 It splits your SASS code up into a logical groupings, based on the premise of using common modules and page specific layouts/overrides. 
