@@ -41,9 +41,13 @@ If you have general utility mixins or functions over and above compass, this is 
 The constructor currently lives in the helpers folder (though I might move it, as it is special) and it serves a role similar to what its name implies. Each breakpoint stylesheet starts by including the construtor. In the constructor we should define any and all modules and helpers that you want to be universally applied/availble. If you don't include them in the constructor, you need to include them manually either in your page styles or in your breakpoint styles.
 
 
-## Plugin Features
+## Plugin Features and tasks
+
+*NOTE: 'SASSquatch' is a wicked name, but can be a bugger to type quickly, so 'yeti' can be used as shorthand for all tasks*
 
 ### Initial SASSquatch installation/setup.
+`grunt sassquatch_setup`
+`grunt yeti_setup`
 This uses the parameters defined in the SASSquatch config in your Gruntfile to output the base folder and file structure for SASSquatch.
 
 You can define your initial modules and pages, as well as your breakpoints and any additional config or helper files you may want.
@@ -58,9 +62,13 @@ The sample config in the plugin gruntfile includes:
 *NOTE: At the moment, it seems like you HAVE to explicitly add a SASSquatch config to your top level Gruntfile; the plugin doesnt fall back to what's defined in the plugin gruntfile as default. I am sure there is a way to do this, but I am a novice with grunt, so for now bear with me!*
 
 ### Add Page
+`grunt sassquatch_add_page:[page name]`
+`grunt yeti_add_page:[page name]`
 You can add a page to your build, and the plugin will automatically generate the appropraite files, paritals and config include lines, to reduce the manualy dependancy.
 
 ### Add Module
+`grunt sassquatch_add_module:[module name]`
+`grunt yeti_add_module:[module name]`
 Same as with adding pages, the plugin handles the files and config for you.
 
 ## Future plugin features
