@@ -12,7 +12,9 @@ It can be used Vanilla, but this requires a lot of manual management of adding f
 
 Both the framework and the Grunt plugin are still in the very early stages, so there is a lot that will probably change, both in terms of the framework approach, and in terms of the functionality of the plugin.
 
-## Framework guide *MORE COMING SOON*
+## Framework guide 
+
+*MORE COMING SOON*
 
 I will write more on the structure and thinking behind the actual framework, as well as some additional usage documentation in the near future, but for now I have outline some top level information and guidelines below. 
 
