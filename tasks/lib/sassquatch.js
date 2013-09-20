@@ -3,14 +3,16 @@ exports.init = function(grunt) {
     'setup' : function() {
       grunt.log.write('Running full SASSquatch setup, from config JSON');
 
-      var config = grunt.config.get('sassquatch');
+      var config = grunt.config.get('sassquatch'),
+          template = null,
+          write_path = null;
+
 
       // Ok, let's get this party started by creating all the config files that are always there
       grunt.file.write(config.sass_path +'/config/_imports_pages.scss', '');
       grunt.file.write(config.sass_path +'/config/_imports_modules.scss', '');
 
       // now we add the extra stuff from the config
-
       config.extra_configs.forEach(function(value, index) {
         grunt.file.write(config.sass_path +'/config/_'+ value +'.scss', '');
       });
@@ -21,6 +23,11 @@ exports.init = function(grunt) {
         'helpers_imports' : ''
       };
 
+      // Cool, let's put the compass config.rb there (static for now)
+      template = grunt.file.read(__dirname + '/../templates/config.rb');
+      write_path = 'config.rb';
+      sassquatch.write_to_template(template, write_path, null);
+
       config.extra_configs.forEach(function(value, index) {
         replacements.config_imports += '@import "config/'+ value +'";\r\n';
       });
@@ -29,14 +36,12 @@ exports.init = function(grunt) {
         replacements.helpers_imports += '@import "helpers/'+ value +'";\r\n';
       });
 
-      var template = grunt.file.read(__dirname + '/../templates/config_imports.scss');
-      var write_path = config.sass_path + '/config/_imports.scss';
-
+      template = grunt.file.read(__dirname + '/../templates/config_imports.scss');
+      write_path = config.sass_path + '/config/_imports.scss';
       sassquatch.write_to_template(template, write_path, replacements);
 
-      var template = grunt.file.read(__dirname + '/../templates/constructor.scss');
-      var write_path = config.sass_path + '/helpers/_constructor.scss';
-
+      template = grunt.file.read(__dirname + '/../templates/constructor.scss');
+      write_path = config.sass_path + '/helpers/_constructor.scss';
       sassquatch.write_to_template(template, write_path, replacements);
 
       var template = grunt.file.read(__dirname + '/../templates/base.scss');
