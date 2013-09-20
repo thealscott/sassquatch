@@ -50,7 +50,7 @@ The constructor currently lives in the helpers folder (though I might move it, a
 
 `grunt yeti_setup`
 
-This uses the parameters defined in the SASSquatch config in your Gruntfile to output the base folder and file structure for SASSquatch.
+This uses the parameters defined in the SASSquatch config in your Gruntfile to output the base folder and file structure for SASSquatch. It also outputs a default-ish Compass config.rb file. This will be configurable in future, but for now it is just some quite standard output and you can manually edit/remove it. 
 
 You can define your initial modules and pages, as well as your breakpoints and any additional config or helper files you may want.
 
