@@ -1,7 +1,7 @@
 {
   "name": "grunt-sassquatch",
   "description": "SASSquatch, the modular SASS framework.",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "homepage": "https://github.com/thealscott/sassquatch",
   "author": {
     "name": "Al Scott",
