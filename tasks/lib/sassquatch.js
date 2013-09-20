@@ -98,7 +98,7 @@ exports.init = function(grunt) {
         '       @include default_page_'+ breakpoint +';\r\n'+
         '   };\r\n'+
         '}';
-        
+
         try {
           grunt.file.write(config.sass_path +'/'+ breakpoint +'.scss', output);
           grunt.log.write('Added breakpoint stylesheet: "'+ breakpoint + '"').ok();
@@ -154,11 +154,16 @@ exports.init = function(grunt) {
         grunt.fail.warn('Failed to add page: "'+ page_name +'"');
       }
 
-      // TODO: make this less brittle, needs to use the configured SASS path
-      var imports_config = grunt.file.read('sass/config/_imports_pages.scss');
+      var imports_config = grunt.file.read(config.sass_path +'/config/_imports_pages.scss');
       imports_config += '\r\n@import "pages/'+ page_name +'/'+ page_name +'";';
-      grunt.file.write('sass/config/_imports_pages.scss', imports_config);
-      grunt.log.write('Added line to config/_imports_pages for "'+ page_name + '"').ok();
+      try {
+        grunt.file.write(config.sass_path +'/config/_imports_pages.scss', imports_config);
+        grunt.log.write('Added line to config/_imports_pages for "'+ page_name + '"').ok();
+      }
+      catch (error) {
+        grunt.log.error().error(error.message);
+        grunt.fail.warn('Failed to add line to config/_imports_pages: "'+ module_name +'"');
+      }
     },
     'add_module' : function(module_name) {
       grunt.log.write('New module: "'+ module_name + '"');
@@ -179,11 +184,18 @@ exports.init = function(grunt) {
         grunt.fail.warn('Failed to add module: "'+ module_name +'"');
       }
 
-      // TODO: make this less brittle, needs to use configured SASS path
-      var imports_config = grunt.file.read('sass/config/_imports_modules.scss');
+
+      var imports_config = grunt.file.read(config.sass_path +'/config/_imports_modules.scss');
       imports_config += '\r\n@import "modules/'+ module_name +'";';
-      grunt.file.write('sass/config/_imports_modules.scss', imports_config);
-      grunt.log.write('Added line to config/_imports_modules for "'+ module_name + '"').ok();
+      try {
+        grunt.file.write(config.sass_path +'/config/_imports_modules.scss', imports_config);
+        grunt.log.write('Added line to config/_imports_modules for "'+ module_name + '"').ok();
+      }
+      catch (error) {
+        grunt.log.error().error(error.message);
+        grunt.fail.warn('Failed to add line to config/_imports_modules: "'+ module_name +'"');
+      }
+
     },
     'write_to_template' : function(template, write_path, replacements) {
       for (var key in replacements) {
