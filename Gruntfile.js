@@ -54,6 +54,7 @@ module.exports = function(grunt) {
     // },
 
     sassquatch: {
+      compass : true,
       sass_path : 'sass',
       extra_configs : [
         'color_map'
