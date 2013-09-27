@@ -54,14 +54,31 @@ This uses the parameters defined in the SASSquatch config in your Gruntfile to o
 
 You can define your initial modules and pages, as well as your breakpoints and any additional config or helper files you may want.
 
-The sample config in the plugin gruntfile includes:
-* home page
-* contact page
-* typography module
-* buttons module
-* color map config
+Sample Config:
 
-*NOTE: At the moment, it seems like you HAVE to explicitly add a SASSquatch config to your top level Gruntfile; the plugin doesnt fall back to what's defined in the plugin gruntfile as default. I am sure there is a way to do this, but I am a novice with grunt, so for now bear with me!*
+    sassquatch: {
+      compass : true,
+      sass_path : 'sass',
+      extra_configs : [
+        'color_map'
+      ],
+      helpers : [],
+      breakpoints : [
+        // base always exists
+        '480',
+        '768', 
+        '960'
+      ],
+      pages : [
+        // default always exists
+        'home',
+        'contact'
+      ],
+      modules : [
+        'typography',
+        'buttons'
+      ]
+    }
 
 ### Add Page
 

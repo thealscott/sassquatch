@@ -1,5 +1,29 @@
 exports.init = function(grunt) {
   var sassquatch = {
+    default_config: {
+      compass : true,
+      sass_path : 'sass',
+      extra_configs : [
+        'color_map'
+      ],
+      helpers : [],
+      breakpoints : [
+        // base always exists
+        '480',
+        '768', 
+        '960'
+      ],
+      pages : [
+        // default always exists
+        'home',
+        'contact'
+      ],
+      modules : [
+        'typography',
+        'buttons'
+      ]
+    },
+
     'setup' : function() {
       grunt.log.subhead('Running full SASSquatch setup, from Gruntfile.js config');
 
@@ -7,6 +31,7 @@ exports.init = function(grunt) {
           template = null,
           write_path = null;
 
+      if (!config) config = sassquatch.default_config;
 
       // Cool, do you want a compass config? 
       if (config.compass != null && config.compass != false) {
@@ -114,8 +139,10 @@ exports.init = function(grunt) {
     'add_page' : function(page_name) {
       grunt.log.writeln('New page: "'+ page_name + '"');
 
-      var config = grunt.config.get('sassquatch'),
-          breakpoints = config.breakpoints,
+      var config = grunt.config.get('sassquatch');
+      if (!config) config = sassquatch.default_config;
+
+      var breakpoints = config.breakpoints,
           content = '@import "base";\r\n';
 
       breakpoints.forEach(function(value, index){
@@ -174,6 +201,8 @@ exports.init = function(grunt) {
             '    %'+ module_name +'_example {\r\n'+
             '    }\r\n'+
             '}';
+
+      if (!config) config = sassquatch.default_config;
       
       try {
         grunt.file.write(config.sass_path +'/modules/_'+ module_name +'.scss', content);
