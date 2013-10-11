@@ -1,6 +1,6 @@
 # (implemented) SASSquatch
 
-**This branch of SASSquatch is designed to serve as an example of SASSquatch when implemented. It could also be used as a bootstrap if you would rather not use the grunt plugin.**
+**This branch of SASSquatch is designed to serve as an example of SASSquatch when implemented. It could also be used as a bootstrap if you would rather not use the [grunt plugin](https://github.com/thealscott/sassquatch).**
 
 
 SASSquatch is a SASS framework (in as much as such a thing is possible), built on top of Compass.
