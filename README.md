@@ -1,6 +1,6 @@
 # (grunt) SASSquatch
 
-**The grunt plugin branch is now the master branch of this project. If you want to see what SASSquatch looks like when implemented, look at the Implemented branch**
+**The grunt plugin branch is now the master branch of this project. If you want to see what SASSquatch looks like when implemented, look at the [Implemented branch](https://github.com/thealscott/sassquatch/tree/implemented)**
 
 SASSquatch is a SASS framework (in as much as such a thing is possible), built on top of Compass.
 
