@@ -92,9 +92,12 @@ You can add a page to your build, and the plugin will automatically generate the
 
 Same as with adding pages, the plugin handles the files and config for you.
 
-## Future plugin features
+## Future plugin features (in no particular order)
 
 * Adding single css file include support
 * Removing pages and modules.
 * Adding and removing helpers and configs
 * Setting default modules to be added to constructor automatically
+* Non-numeric "breakpoints" (possibly with new name for the concept)
+* Configurable Compass config.rb
+* Move the Constructor our of Helpers
