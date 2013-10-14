@@ -1,0 +1,22 @@
+{
+  "name": "sassquatch-implemented",
+  "version": "0.0.0",
+  "description": "A working example of SASSquatch in action",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thealscott/sassquatch.git"
+  },
+  "author": "Al Scott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thealscott/sassquatch/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-sassquatch": "~0.2.7"
+  }
+}
