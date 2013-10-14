@@ -6,7 +6,7 @@ Page/pagetype specific markup hooks and styling should happen here. This require
 
 The default page is generated automatically as part of the setup task. 
 
-You would use this set of page files to define your default or standard page styles, which can be included as baseline styles to be overridden as needed, or as a specific page layout for pages that dont have their own specific layout.
+You would use this set of page files to define your default or standard page styles, which can be included as baseline styles to be overridden as needed, or as a specific page layout for pages that don't have their own specific layout.
 
 ## Adding a page
 
@@ -14,7 +14,7 @@ You would use this set of page files to define your default or standard page sty
 
 `grunt yeti_add_page:[page name]`
 
-You can add a page to your build, and the plugin will automatically generate the appropriate files, partials and config include lines, to reduce the manualy dependancy.
+You can add a page to your build, and the plugin will automatically generate the appropriate files, partials and config include lines, to reduce the manual dependency.
 
 You can also define whatever pages you want upfront in the Gruntfile.js SASSquatch config. 
 

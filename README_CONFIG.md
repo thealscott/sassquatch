@@ -21,4 +21,4 @@ Any _imports file with a suffix should not be messed with, as these files are ha
 
 You can add your own config files for holding global variables you may want to use throughout your project. Any variables declared within modules or pages will be locally scoped as they all sit inside a mixin wrapper.
 
-You can define additional config files in the Sassquatch config object in your Gruntfile.js.
+You can define additional config files in the SASSquatch config object in your Gruntfile.js.

@@ -18,7 +18,7 @@ Both the framework and the Grunt plugin are still in the very early stages, so t
 
 *MORE COMING SOON*
 
-I will write more on the structure and thinking behind the actual framework, as well as some additional usage documentation in the near future, but for now I have outline some top level information and guidelines below. 
+I will write more on the structure and thinking behind the actual framework, as well as some additional usage documentation in the near future, but for now I have outlined some top level information and guidelines below. 
 
 ### [Breakpoints](README_BREAKPOINTS.md)
 
@@ -82,7 +82,7 @@ Sample Config:
 
 `grunt yeti_add_page:[page name]`
 
-You can add a page to your build, and the plugin will automatically generate the appropriate files, partials and config include lines, to reduce the manualy dependancy.
+You can add a page to your build, and the plugin will automatically generate the appropriate files, partials and config include lines, to reduce the manual dependency.
 
 ### Add Module
 

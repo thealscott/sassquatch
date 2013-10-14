@@ -1,6 +1,6 @@
 # Breakpoints
 
-Because of SASS's limitations regarding extending classes across media blocks, in order to have one common source for extensible classes it is neccessary to have each media query as a separate compiled file. Each breakpoint generates a separate SASS file that will compile to separate CSS files. These should all be included in your HTML.
+Because of SASS's limitations regarding extending classes across media blocks, in order to have one common source for extensible classes it is necessary to have each media query as a separate compiled file. Each breakpoint generates a separate SASS file that will compile to separate CSS files. These should all be included in your HTML.
 
 *NOTE: I would rather be able to compile everything into a single CSS file, but at present some quirks of SASS seem to preclude the possibility so long as you want to make use of extensible classes declared outside the media block. I had originally hoped to avoid this by redeclaring those placeholders within each media block by calling the mixin again within the block, but SASS seems to ignore these declarations when you try and compile everything together, and so the first declaration still triggers the extend error on compile. I have a plan for the next version that will make this a little less fiddly* 
 
