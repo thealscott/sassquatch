@@ -6,7 +6,9 @@ exports.init = function(grunt) {
       extra_configs : [
         'color_map'
       ],
-      helpers : [],
+      helpers : [
+        'polyfills'
+      ],
       breakpoints : [
         // base always exists
         '480',
@@ -60,10 +62,9 @@ exports.init = function(grunt) {
         grunt.fail.warn('Failed to add import configs');
       }
       
-
       // now we add the extra stuff from the config
 
-
+      //extra configs
       config.extra_configs.forEach(function(value, index) {
         try {
           grunt.file.write(config.sass_path +'/config/_'+ value +'.scss', '');
@@ -75,6 +76,17 @@ exports.init = function(grunt) {
         }
       });
 
+      //and helpers
+      config.helpers.forEach(function(value, index) {
+        try {
+          grunt.file.write(config.sass_path +'/helpers/_'+ value +'.scss', '');
+          grunt.log.write('Added helper file: "'+ value +'"').ok();
+        }
+        catch (error) {
+          grunt.log.error().error(error.message);
+          grunt.fail.warn('Failed to add helper file: "'+ value +'"');
+        }
+      });
 
       // Now compile the master imports file
       var replacements = {
