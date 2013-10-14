@@ -20,27 +20,21 @@ Both the framework and the Grunt plugin are still in the very early stages, so t
 
 I will write more on the structure and thinking behind the actual framework, as well as some additional usage documentation in the near future, but for now I have outline some top level information and guidelines below. 
 
-### Breakpoints
-Because of SASS's limitations regarding extending classes across media blocks, in order to have one common source for extensible classes it is neccessary to have each media query as a separate compiled file. Each breakpoint generates a separate SASS file that will compile to separate CSS files. These should all be included in your HTML.
+### [Breakpoints](README_BREAKPOINTS.md)
 
-*NOTE: I would rather be able to compile everything into a single CSS file, but at present some quirks of SASS seem to preclude the possibility so long as you want to make use of extensible classes declared outside the media block. I had originally hoped to avoid this by redeclaring those placeholders within each media block by calling the mixin again within the block, but SASS seems to ignore these declarations when you try and compile everything together, and so the first declaration still triggers the extend error on compile* 
+### [Modules](README_MODULES.md)
 
-### Modules
-Modules are where modular style sets can be kept. These are styles that will be reused across the design, things like buttons, typography rules and so forth. Ideally you define placeholder classes here, that can be "instantiated" by extending them in your main/page styles, attached to semantic classes.  
+### [Pages](README_PAGES.md)
 
-### Pages
-Page/pagetype specific markup hooks and styling should happen here. This requires the use of page type hooks (I suggest on the body element) in order to "namespace" your styles for a specific page or type of page. I find this approach useful, even if you are working on a very uniform page design, but obviously it is most useful when designs vary between pages.
+### [Config](README_CONFIG.md)
 
-### Config
-Generally you will be using scoped variables inside all the pages/modules, but if you need universal config variables, here is where to put them. In addition, the system config (import lists) will be in this folder too. As an example of a config, I use a color map where I can assign more memorable names for commonly used colors in the theme, without assigning them semantic var names. 
+### [Helpers](README_HELPERS.md)
 
-### Helpers
-If you have general utility mixins or functions over and above compass, this is the place for them to live.
-
-### The Constructor
-The constructor currently lives in the helpers folder (though I might move it, as it is special) and it serves a role similar to what its name implies. Each breakpoint stylesheet starts by including the constructor. In the constructor we should define any and all modules and helpers that you want to be universally applied/available. If you don't include them in the constructor, you need to include them manually either in your page styles or in your breakpoint styles.
+### [The Constructor](README_CONSTRUCTOR.md)
 
 ## Plugin Features and tasks
+
+This is just a high level overview of available grunt tasks. More details can be found in the Framework documentation.
 
 *NOTE: 'SASSquatch' is a wicked name, but can be a bugger to type quickly, so 'yeti' can be used as shorthand for all tasks*
 
@@ -62,7 +56,9 @@ Sample Config:
       extra_configs : [
         'color_map'
       ],
-      helpers : [],
+      helpers : [
+        'polyfills'
+      ],
       breakpoints : [
         // base always exists
         '480',
@@ -98,6 +94,7 @@ Same as with adding pages, the plugin handles the files and config for you.
 
 ## Future plugin features
 
+* Adding single css file include support
 * Removing pages and modules.
 * Adding and removing helpers and configs
 * Setting default modules to be added to constructor automatically
