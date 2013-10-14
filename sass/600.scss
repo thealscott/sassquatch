@@ -1,0 +1,7 @@
+@media only screen and (min-width: 600px) {
+   @import "config/imports";
+   
+   @include construct() {
+       @include default_page_600;
+   };
+}
