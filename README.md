@@ -16,11 +16,11 @@ It can be used Vanilla, but this requires a lot of manual management of adding f
 
 Both the framework and the Grunt plugin are still in the very early stages, so there is a lot that will probably change, both in terms of the framework approach, and in terms of the functionality of the plugin.
 
-## Framework documentation
+### Framework documentation
 
 *This is still a work in progress*
 
-[Please view the full docs on Github.](https://github.com/thealscott/sassquatch/docs/intro.md)
+[Please view the full docs on Github.](https://github.com/thealscott/sassquatch/blob/master/docs/intro.md)
 
 ## Quickstart Guide
 
@@ -100,7 +100,7 @@ This will run SASSquatch for the first time and generate all the framework files
 
 and voila! your SASS will be compiled, and you are ready to roll.
 
-Please refer to the [full docs](https://github.com/thealscott/sassquatch/docs/intro.md) and the task overview below for more information.
+Please refer to the [full docs](https://github.com/thealscott/sassquatch/blob/master/docs/intro.md) and the task overview below for more information.
 
 ## Grunt Tasks Overview
 
