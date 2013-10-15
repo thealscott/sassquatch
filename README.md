@@ -2,6 +2,8 @@
 
 **The grunt plugin branch is now the master branch of this project. If you want to see what SASSquatch looks like when implemented, look at the [Implemented branch](https://github.com/thealscott/sassquatch/tree/implemented)**
 
+## Introduction
+
 SASSquatch is a SASS framework (in as much as such a thing is possible), built on top of Compass.
 
 It splits your SASS code up into a logical groupings, based on the premise of using common modules and page specific layouts/overrides. 
@@ -14,31 +16,97 @@ It can be used Vanilla, but this requires a lot of manual management of adding f
 
 Both the framework and the Grunt plugin are still in the very early stages, so there is a lot that will probably change, both in terms of the framework approach, and in terms of the functionality of the plugin.
 
-## Framework guide 
+## Framework documentation
 
-*MORE COMING SOON*
+*This is still a work in progress*
 
-I will write more on the structure and thinking behind the actual framework, as well as some additional usage documentation in the near future, but for now I have outlined some top level information and guidelines below. 
+[Please view the full docs on Github.](https://github.com/thealscott/sassquatch/docs/intro.md)
 
-### [Breakpoints](README_BREAKPOINTS.md)
+## Quickstart Guide
 
-### [Modules](README_MODULES.md)
+This is a concise overview of getting SASSquatch installed and running for you. Please refer to the full docs for info about the structure and logic of the framework.
 
-### [Pages](README_PAGES.md)
+### Installing Node.js and NPM
 
-### [Config](README_CONFIG.md)
+Go to [http://nodejs.org/](http://nodejs.org/) and use the handy installation options they offer. 
 
-### [Helpers](README_HELPERS.md)
+### Installing Grunt Command Line Interface (CLI)
 
-### [The Constructor](README_CONSTRUCTOR.md)
+Now you have NPM, you can install Grunt-CLI. Follow the handy instructions [here](http://gruntjs.com/getting-started).
 
-## Plugin Features and tasks
+### Setting up Grunt and SASSquatch in a new project
 
-This is just a high level overview of available grunt tasks. More details can be found in the Framework documentation.
+With Grunt-CLI installed, you can now set up a new project. You can use a [grunt-init template](http://gruntjs.com/project-scaffolding) , or else simply run these tasks from the command line in your working folder:
+
+`npm init` 
+
+This creates *package.json*
+
+`npm install grunt --save-dev` 
+
+This will install grunt to the project and include the dependencies in your package.js automatically.
+
+`npm install sassquatch --save-dev`
+
+As above, but for SASSquatch
+
+`touch Gruntfile.js`
+
+Creates the Gruntfile, where all your grunt tasks and configuration will live.
+
+You can use this sample code below in your Gruntfile to get up and running. Change the config settings for SASSquatch to match your needs, or just try it out with the defaults.
+
+    module.exports = function(grunt) {
+    
+      // Project configuration.
+      grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        sassquatch: {
+          compass : true,
+          sass_path : 'sass',
+          extra_configs : [
+            'color_map'
+          ],
+          helpers : [
+            'polyfills'
+          ],
+          breakpoints : [
+            // base always exists
+            '600',
+            '960'
+          ],
+          pages : [
+            // default always exists
+            'home',
+            'contact'
+          ],
+          modules : [
+            'typography',
+            'buttons'
+          ]
+        }
+      });    
+      // Load the plugin for SASSquatch
+      grunt.loadNpmTasks('grunt-sassquatch');
+    };
+
+Now everything is installed and you have a package and gruntfile with all the needed stuff in it, you are ready to start using SASSquatch.
+
+`grunt sassquatch_setup`
+
+This will run SASSquatch for the first time and generate all the framework files you need. It will also generate a *config.rb* file for use with Compass. You will need to manually edit this if you want to change from the default settings. If you are happy with your Compass settings, then all that's left to do is:
+
+`compass watch`
+
+and voila! your SASS will be compiled, and you are ready to roll.
+
+Please refer to the [full docs](https://github.com/thealscott/sassquatch/docs/intro.md) and the task overview below for more information.
+
+## Grunt Tasks Overview
 
 *NOTE: 'SASSquatch' is a wicked name, but can be a bugger to type quickly, so 'yeti' can be used as shorthand for all tasks*
 
-### Initial SASSquatch installation/setup.
+### Initial Setup
 
 `grunt sassquatch_setup`
 
@@ -47,34 +115,6 @@ This is just a high level overview of available grunt tasks. More details can be
 This uses the parameters defined in the SASSquatch config in your Gruntfile to output the base folder and file structure for SASSquatch. It also outputs a default-ish Compass config.rb file. This will be configurable in future, but for now it is just some quite standard output and you can manually edit/remove it. 
 
 You can define your initial modules and pages, as well as your breakpoints and any additional config or helper files you may want.
-
-Sample Config:
-
-    sassquatch: {
-      compass : true,
-      sass_path : 'sass',
-      extra_configs : [
-        'color_map'
-      ],
-      helpers : [
-        'polyfills'
-      ],
-      breakpoints : [
-        // base always exists
-        '480',
-        '768', 
-        '960'
-      ],
-      pages : [
-        // default always exists
-        'home',
-        'contact'
-      ],
-      modules : [
-        'typography',
-        'buttons'
-      ]
-    }
 
 ### Add Page
 
