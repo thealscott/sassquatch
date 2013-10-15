@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 	    'color_map'
 	  ],
 	  helpers : [
-	    //'polyfills' TODO: this is broke, yo. It's adding the line to the imports config, but not creating the file.
+	    'polyfills'
 	  ],
 	  breakpoints : [
 	    // base always exists
