@@ -1,4 +1,4 @@
-## Quickstart Guide
+# Quickstart Guide
 
 This is a concise overview of getting SASSquatch installed and running for you. Please refer to the full docs for info about the structure and logic of the framework.
 
