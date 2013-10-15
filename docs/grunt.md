@@ -2,6 +2,36 @@
 
 *NOTE: 'SASSquatch' is a wicked name, but can be a bugger to type quickly, so 'yeti' can be used as shorthand for all tasks*
 
+### Sample Gruntfile config:
+
+Below is an example of a SASSquatch config object for use in your Gruntfile.js. 
+
+    sassquatch: {
+      compass : true,
+      sass_path : 'sass',
+      extra_configs : [
+        'color_map'
+      ],
+      helpers : [
+        'polyfills'
+      ],
+      breakpoints : [
+        // base always exists
+        '600',
+        '960'
+      ],
+      pages : [
+        // default always exists
+        'home',
+        'contact'
+      ],
+      modules : [
+        'typography',
+        'buttons'
+      ]
+    }
+
+
 ### Initial Setup
 
 `grunt sassquatch_setup`
