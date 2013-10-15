@@ -18,7 +18,9 @@ module.exports = function(grunt) {
       extra_configs : [
         'color_map'
       ],
-      helpers : [],
+      helpers : [
+        'polyfills'
+      ],
       breakpoints : [
         // base always exists
         '480',
