@@ -1,6 +1,8 @@
 # (grunt) SASSquatch
 
-**The grunt plugin branch is now the master branch of this project. If you want to see what SASSquatch looks like when implemented, look at the [Implemented branch](https://github.com/thealscott/sassquatch/tree/implemented)**
+#### **I have learnt a lot making this plugin and the framework along with it, and what I have learnt has led me to believe that although many of the ideas behind the framework are solid, this exact implementation is deeply flawed. As such, SASSquatch is currently dead. When I get some time I am gonna come back to it though, to take the good ideas and lose the chaff.**
+
+The grunt plugin branch is now the master branch of this project. If you want to see what SASSquatch looks like when implemented, look at the [Implemented branch](https://github.com/thealscott/sassquatch/tree/implemented)
 
 ## Introduction
 
